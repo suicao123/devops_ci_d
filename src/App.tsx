@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import './App.css'; // Import file CSS thuần
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="container">
+      {/* Navbar */}
+      <nav className="navbar">
+        <div className="logo">MyBrand</div>
+        <ul className="nav-links">
+          <li>Trang chủ</li>
+          <li>Dịch vụ</li>
+          <li>Liên hệ</li>
+        </ul>
+        <button className="btn-primary">Bắt đầu</button>
+      </nav>
+
+      {/* Hero Section */}
+      <header className="hero">
+        <div className="hero-content">
+          <h1>Chào mừng đến với <span className="highlight">React App</span></h1>
+          <p>Trang web này được xây dựng bằng React và CSS thuần (Plain CSS).</p>
+          <div className="button-group">
+            <button className="btn-main">Khám phá</button>
+            <button className="btn-outline">Tìm hiểu thêm</button>
+          </div>
+        </div>
+      </header>
+
+      {/* Footer */}
+      <footer className="footer">
+        <p>© 2024 MyBrand. Built with Pure CSS.</p>
+      </footer>
+    </div>
+  );
 }
 
-export default App
+export default App;
